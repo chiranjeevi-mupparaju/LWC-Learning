@@ -3,6 +3,7 @@
     <head>
 <title> web to lead form</title>
 <link rel="stylesheet" href="design.css"/>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="script.js"></script>
     </head>
     <body>
@@ -12,6 +13,7 @@
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5i0000013deG" 
 method="POST" 
 onsubmit="beforesubmit()">
+<input type=hidden name='captcha_settings' value='{"keyname":"WebToLead","fallback":"true","orgId":"00D5i0000013deG","ts":""}'>
 
 <input type=hidden 
 name="oid" 
@@ -57,7 +59,11 @@ required="true" class="inputdate"/>
 
 <br>
 
+
 <input type="submit" name="submit" class="submit">
+
+<div class="g-recaptcha" data-sitekey="6LesvHorAAAAAEw9wywATTY24vdAB6MJKL4CgYj1"></div><br>
+
 
 </form>
 </body>
